@@ -1,0 +1,87 @@
+{
+  "169798045652201" : {
+    "logId" : 169798045652201,
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1697980456522,
+    "updateTime" : 1697980456522,
+    "transferInfoDAO" : {
+      "operationId" : 169798045652200,
+      "cardFromNumber" : "4477010701161228",
+      "cardToNumber" : "5599701161228790",
+      "amount" : {
+        "value" : 179,
+        "currency" : "EUR"
+      },
+      "commission" : 0.03
+    }
+  },
+  "169789403658403" : {
+    "logId" : 169789403658403,
+    "code" : "2122",
+    "status" : "COMPLETED",
+    "startTime" : 1697980256046,
+    "updateTime" : 1697980311576,
+    "transferInfoDAO" : {
+      "operationId" : 169789403658401,
+      "cardFromNumber" : "4477010701161228",
+      "cardToNumber" : "5599701161228790",
+      "amount" : {
+        "value" : 179,
+        "currency" : "EUR"
+      },
+      "commission" : 0.03
+    }
+  },
+  "169789403658401" : {
+    "logId" : 169789403658401,
+    "code" : "2122",
+    "status" : "COMPLETED",
+    "startTime" : 1697894036584,
+    "updateTime" : 1697894045375,
+    "transferInfoDAO" : {
+      "operationId" : 169789403658400,
+      "cardFromNumber" : "4477010701161228",
+      "cardToNumber" : "5599701161228790",
+      "amount" : {
+        "value" : 179,
+        "currency" : "EUR"
+      },
+      "commission" : 0.03
+    }
+  },
+  "169766002366601" : {
+    "logId" : 169766002366601,
+    "code" : "2122",
+    "status" : "EXPIRED",
+    "startTime" : 1697660023666,
+    "updateTime" : 1697660280379,
+    "transferInfoDAO" : {
+      "operationId" : 169766002366600,
+      "cardFromNumber" : "4477010701161228",
+      "cardToNumber" : "5599701161228790",
+      "amount" : {
+        "value" : 179,
+        "currency" : "EUR"
+      },
+      "commission" : 0.03
+    }
+  },
+  "169789403658404" : {
+    "logId" : 169789403658404,
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1697980433465,
+    "updateTime" : 1697980433465,
+    "transferInfoDAO" : {
+      "operationId" : 169789403658403,
+      "cardFromNumber" : "4477010701161228",
+      "cardToNumber" : "5599701161228790",
+      "amount" : {
+        "value" : 179,
+        "currency" : "EUR"
+      },
+      "commission" : 0.03
+    }
+  }
+}
