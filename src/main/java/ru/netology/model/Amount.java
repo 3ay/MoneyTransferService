@@ -2,10 +2,7 @@ package ru.netology.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
-import org.springframework.boot.context.properties.ConstructorBinding;
 
-import javax.management.ConstructorParameters;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

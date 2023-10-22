@@ -1,5 +1,6 @@
 package ru.netology.containers;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -7,11 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import ru.netology.exceptions.ErrorResponse;
 import ru.netology.model.Amount;
-import ru.netology.model.ConfirmOperationRequest;
 import ru.netology.model.TransferInfoRequest;
 
 import java.util.Objects;

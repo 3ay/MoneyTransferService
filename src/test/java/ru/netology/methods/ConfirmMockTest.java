@@ -17,7 +17,6 @@ import ru.netology.model.TransferStatus;
 import ru.netology.services.impl.LogServiceImpl;
 
 import java.util.Date;
-import java.util.Optional;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;

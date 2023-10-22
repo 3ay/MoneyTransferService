@@ -42,7 +42,7 @@ public class TransferServiceImpl implements TransferService {
 
     @Override
     public ConfirmOperationResponse confirmOperation(ConfirmOperationRequest confirmOperationRequest) {
-        Log log = logService.findLogByTransferId(Long.valueOf(confirmOperationRequest.getOperationId()));
+        Log log = logService.findLogByTransferId(Long.parseLong(confirmOperationRequest.getOperationId()));
         if (log == null) {
             throw new IdNotFoundException(confirmOperationRequest.getOperationId());
         }
