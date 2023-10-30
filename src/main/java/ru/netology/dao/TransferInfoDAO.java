@@ -1,13 +1,15 @@
 package ru.netology.dao;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import ru.netology.model.Amount;
 
-@Data
+@Getter
+@Setter
 public class TransferInfoDAO {
-    long operationId;
-    String cardFromNumber;
-    String cardToNumber;
-    Amount amount;
-    double commission;
+    private String operationId;
+    private String cardFromNumber;
+    private String cardToNumber;
+    private Amount amount;
+    private double commission;
 }

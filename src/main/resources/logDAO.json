@@ -1,0 +1,308 @@
+{
+  "169789403658401" : {
+    "logId" : "169789403658401",
+    "code" : "2122",
+    "status" : "COMPLETED",
+    "startTime" : 1697894036584,
+    "updateTime" : 1697894045375,
+    "transferInfoDAO" : {
+      "operationId" : "169789403658400",
+      "cardFromNumber" : "4477010701161228",
+      "cardToNumber" : "5599701161228790",
+      "amount" : {
+        "value" : 179,
+        "currency" : "EUR"
+      },
+      "commission" : 0.03
+    }
+  },
+  "71e2d1d2-30a5-4043-9a85-ff8c65c547a3" : {
+    "logId" : "71e2d1d2-30a5-4043-9a85-ff8c65c547a3",
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1698669250461,
+    "updateTime" : 1698669250462,
+    "transferInfoDAO" : {
+      "operationId" : "23a4b134-5c39-4790-b784-c246ab84cee2",
+      "cardFromNumber" : "4477010701161221",
+      "cardToNumber" : "5599701161228791",
+      "amount" : {
+        "value" : 179,
+        "currency" : "EUR"
+      },
+      "commission" : 0.03
+    }
+  },
+  "66e3f7a4-9fa0-4a02-b689-403e361fab9f" : {
+    "logId" : "66e3f7a4-9fa0-4a02-b689-403e361fab9f",
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1698671550675,
+    "updateTime" : 1698671550675,
+    "transferInfoDAO" : {
+      "operationId" : "43b16757-0f9e-4a34-a248-c7f0ddafb823",
+      "cardFromNumber" : "1234567812345678",
+      "cardToNumber" : "8765432187654321",
+      "amount" : {
+        "value" : 100,
+        "currency" : "USD"
+      },
+      "commission" : 0.02
+    }
+  },
+  "dd662d1a-cecd-4eb2-b5df-8ab5fabd0c1d" : {
+    "logId" : "dd662d1a-cecd-4eb2-b5df-8ab5fabd0c1d",
+    "code" : "7766",
+    "status" : "COMPLETED",
+    "startTime" : 1698680311091,
+    "updateTime" : 1698680332323,
+    "transferInfoDAO" : {
+      "operationId" : "42a31aa1-d62e-40bc-9145-cdd08d990702",
+      "cardFromNumber" : "4477019701161231",
+      "cardToNumber" : "5599791164228791",
+      "amount" : {
+        "value" : 78900,
+        "currency" : "RUB"
+      },
+      "commission" : 0.01
+    }
+  },
+  "169766002366601" : {
+    "logId" : "169766002366601",
+    "code" : "2122",
+    "status" : "EXPIRED",
+    "startTime" : 1697660023666,
+    "updateTime" : 1697660280379,
+    "transferInfoDAO" : {
+      "operationId" : "169766002366600",
+      "cardFromNumber" : "4477010701161228",
+      "cardToNumber" : "5599701161228790",
+      "amount" : {
+        "value" : 179,
+        "currency" : "EUR"
+      },
+      "commission" : 0.03
+    }
+  },
+  "ab66662c-957f-4454-9495-2204410e11dc" : {
+    "logId" : "ab66662c-957f-4454-9495-2204410e11dc",
+    "code" : "9911",
+    "status" : "COMPLETED",
+    "startTime" : 1698669397668,
+    "updateTime" : 1698669418170,
+    "transferInfoDAO" : {
+      "operationId" : "51d1468e-8244-46bf-8251-611f91664402",
+      "cardFromNumber" : "4477010701161221",
+      "cardToNumber" : "5599701161228791",
+      "amount" : {
+        "value" : 179,
+        "currency" : "EUR"
+      },
+      "commission" : 0.03
+    }
+  },
+  "ddbfba1a-cb0c-44b1-9aa4-4fdfbffb57b4" : {
+    "logId" : "ddbfba1a-cb0c-44b1-9aa4-4fdfbffb57b4",
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1698677427916,
+    "updateTime" : 1698677427916,
+    "transferInfoDAO" : {
+      "operationId" : "8747f9f2-100b-440d-9459-d3b7a36f271e",
+      "cardFromNumber" : "1234567812345678",
+      "cardToNumber" : "8765432187654321",
+      "amount" : {
+        "value" : 100,
+        "currency" : "USD"
+      },
+      "commission" : 0.02
+    }
+  },
+  "169789403658404" : {
+    "logId" : "169789403658404",
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1697980433465,
+    "updateTime" : 1697980433465,
+    "transferInfoDAO" : {
+      "operationId" : "169789403658403",
+      "cardFromNumber" : "4477010701161228",
+      "cardToNumber" : "5599701161228790",
+      "amount" : {
+        "value" : 179,
+        "currency" : "EUR"
+      },
+      "commission" : 0.03
+    }
+  },
+  "169789403658403" : {
+    "logId" : "169789403658403",
+    "code" : "2122",
+    "status" : "COMPLETED",
+    "startTime" : 1697980256046,
+    "updateTime" : 1697980311576,
+    "transferInfoDAO" : {
+      "operationId" : "169789403658401",
+      "cardFromNumber" : "4477010701161228",
+      "cardToNumber" : "5599701161228790",
+      "amount" : {
+        "value" : 179,
+        "currency" : "EUR"
+      },
+      "commission" : 0.03
+    }
+  },
+  "f230c362-bdd8-4bee-bbd1-622bc63aa27d" : {
+    "logId" : "f230c362-bdd8-4bee-bbd1-622bc63aa27d",
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1698674542928,
+    "updateTime" : 1698674542928,
+    "transferInfoDAO" : {
+      "operationId" : "e7952273-6bdc-4101-883c-8942db65612b",
+      "cardFromNumber" : "1234567812345678",
+      "cardToNumber" : "8765432187654321",
+      "amount" : {
+        "value" : 100,
+        "currency" : "USD"
+      },
+      "commission" : 0.02
+    }
+  },
+  "26e30f21-6023-42ed-b309-71ec0c279922" : {
+    "logId" : "26e30f21-6023-42ed-b309-71ec0c279922",
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1698675445445,
+    "updateTime" : 1698675445445,
+    "transferInfoDAO" : {
+      "operationId" : "0c7b9cd9-194e-413d-94fd-deea3f532c61",
+      "cardFromNumber" : "1234567812345678",
+      "cardToNumber" : "8765432187654321",
+      "amount" : {
+        "value" : 100,
+        "currency" : "USD"
+      },
+      "commission" : 0.02
+    }
+  },
+  "868a6ce2-98a2-4484-9052-daf8deb90905" : {
+    "logId" : "868a6ce2-98a2-4484-9052-daf8deb90905",
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1698679099923,
+    "updateTime" : 1698679099923,
+    "transferInfoDAO" : {
+      "operationId" : "40e30b83-d715-496c-ac9a-e338d6421b09",
+      "cardFromNumber" : "1234567812345678",
+      "cardToNumber" : "8765432187654321",
+      "amount" : {
+        "value" : 100,
+        "currency" : "USD"
+      },
+      "commission" : 0.02
+    }
+  },
+  "2c2c0cfb-02f1-4935-a08d-8ce2a6252c09" : {
+    "logId" : "2c2c0cfb-02f1-4935-a08d-8ce2a6252c09",
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1698680404716,
+    "updateTime" : 1698680404716,
+    "transferInfoDAO" : {
+      "operationId" : "d4e687ad-e148-4613-81b2-cce87720bf81",
+      "cardFromNumber" : "1234567812345678",
+      "cardToNumber" : "8765432187654321",
+      "amount" : {
+        "value" : 100,
+        "currency" : "USD"
+      },
+      "commission" : 0.02
+    }
+  },
+  "326736b4-09ed-4df7-b194-8af8af8071be" : {
+    "logId" : "326736b4-09ed-4df7-b194-8af8af8071be",
+    "code" : "2233",
+    "status" : "COMPLETED",
+    "startTime" : 1698670563846,
+    "updateTime" : 1698670579829,
+    "transferInfoDAO" : {
+      "operationId" : "4edf098b-c9bd-4749-bb7b-e45054bb61c6",
+      "cardFromNumber" : "4477010701161231",
+      "cardToNumber" : "5599701164228791",
+      "amount" : {
+        "value" : 23223,
+        "currency" : "RUB"
+      },
+      "commission" : 0.01
+    }
+  },
+  "169798045652201" : {
+    "logId" : "169798045652201",
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1697980456522,
+    "updateTime" : 1697980456522,
+    "transferInfoDAO" : {
+      "operationId" : "169798045652200",
+      "cardFromNumber" : "4477010701161228",
+      "cardToNumber" : "5599701161228790",
+      "amount" : {
+        "value" : 179,
+        "currency" : "EUR"
+      },
+      "commission" : 0.03
+    }
+  },
+  "f891ae4d-e42f-4bbb-a234-16a501ea9f73" : {
+    "logId" : "f891ae4d-e42f-4bbb-a234-16a501ea9f73",
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1698671529505,
+    "updateTime" : 1698671529505,
+    "transferInfoDAO" : {
+      "operationId" : "ad24de24-f0dc-4589-88d5-1df4432ec155",
+      "cardFromNumber" : "1234567812345678",
+      "cardToNumber" : "8765432187654321",
+      "amount" : {
+        "value" : 100,
+        "currency" : "USD"
+      },
+      "commission" : 0.02
+    }
+  },
+  "a2cf1535-e489-48b1-b11b-facd513241ea" : {
+    "logId" : "a2cf1535-e489-48b1-b11b-facd513241ea",
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1698679207265,
+    "updateTime" : 1698679207265,
+    "transferInfoDAO" : {
+      "operationId" : "fdb0f561-04c6-437a-a80e-19ee9a145a3d",
+      "cardFromNumber" : "1234567812345678",
+      "cardToNumber" : "8765432187654321",
+      "amount" : {
+        "value" : 100,
+        "currency" : "USD"
+      },
+      "commission" : 0.02
+    }
+  },
+  "9061bd7a-a0c5-4c3a-9b5e-55e9a273bda9" : {
+    "logId" : "9061bd7a-a0c5-4c3a-9b5e-55e9a273bda9",
+    "code" : null,
+    "status" : "ACCEPTED",
+    "startTime" : 1698675248082,
+    "updateTime" : 1698675248082,
+    "transferInfoDAO" : {
+      "operationId" : "0c32844d-325f-4eb8-9e99-fe4a8c8992ea",
+      "cardFromNumber" : "1234567812345678",
+      "cardToNumber" : "8765432187654321",
+      "amount" : {
+        "value" : 100,
+        "currency" : "USD"
+      },
+      "commission" : 0.02
+    }
+  }
+}

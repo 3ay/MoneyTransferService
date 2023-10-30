@@ -18,12 +18,20 @@ public class TransferMockTest {
     private MockMvc mockMvc;
     @Test
     public void transferMoneyReturnsCorrectOperationId() throws Exception {
-    String requestBody ="{\"cardFromNumber\":\"1234567812345678\"," +
-            "\"cardToNumber\":\"8765432187654321\"," +
-            " \"cardFromCVV\": \"126\",\n" +
-            " \"cardFromValidTill\": \"11/24\",\n" +
-            "\"amount\":" +
-            "{\"value\":100.0,\"currency\":\"USD\"}}";
+        String requestBody = String.format(
+                "{\"cardFromNumber\":\"%s\"," +
+                        "\"cardToNumber\":\"%s\"," +
+                        " \"cardFromCVV\": \"%s\",\n" +
+                        " \"cardFromValidTill\": \"%s\",\n" +
+                        "\"amount\":" +
+                        "{\"value\":%d,\"currency\":\"%s\"}}",
+                "1234567812345678",
+                "8765432187654321",
+                "126",
+                "11/24",
+                100,
+                "USD"
+        );
         mockMvc.perform(post("/transfer")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(requestBody))
@@ -31,22 +39,52 @@ public class TransferMockTest {
     }
     @Test
     void return400IncorrectCardFromNumberTest() throws Exception {
-        String requestBody = "{\n" +
-                "  \"cardFromNumber\": \"782\",\n" +
-                "  \"cardToNumber\": \"8566161424813126\",\n" +
-                "  \"cardFromCVV\": \"197\",\n" +
-                "  \"cardFromValidTill\": \"11/24\",\n" +
-                "  \"amount\": {\n" +
-                "    \"currency\": \"RUB\",\n" +
-                "    \"value\": 3500000\n" +
-                "  }\n" +
-                "}\n";
+        String requestBody = String.format(
+                "{%n" +
+                        "  \"cardFromNumber\": \"%s\",%n" +
+                        "  \"cardToNumber\": \"%s\",%n" +
+                        "  \"cardFromCVV\": \"%s\",%n" +
+                        "  \"cardFromValidTill\": \"%s\",%n" +
+                        "  \"amount\": {%n" +
+                        "    \"currency\": \"%s\",%n" +
+                        "    \"value\": %d%n" +
+                        "  }%n" +
+                        "}",
+                "782",
+                "8566161424813126",
+                "197",
+                "11/24",
+                "RUB",
+                3500000
+        );
         mockMvc.perform(
                         post("/transfer")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(requestBody)
                 )
                 .andExpect(status().is(400))
+                .andExpect(jsonPath("$.message").isNotEmpty());
+    }
+    @Test
+    void return500IncorrectBodyTest() throws Exception {
+        String requestBody = String.format(
+                "{%n" +
+                        "  \"cardFromNumber\": \"%s\",%n" +
+                        "  \"cardToNumber\": \"%s\",%n" +
+                        "  \"cardFromCVV\": \"%s\",%n" +
+                        "  \"cardFromValidTill\": \"%s\",%n" +
+                        "}",
+                "782",
+                "8566161424813126",
+                "197",
+                "11/24"
+        );
+        mockMvc.perform(
+                        post("/transfer")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(requestBody)
+                )
+                .andExpect(status().is(500))
                 .andExpect(jsonPath("$.message").isNotEmpty());
     }
 }

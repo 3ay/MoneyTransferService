@@ -13,10 +13,10 @@ import javax.validation.constraints.Pattern;
 public class Amount {
     @NotNull(message = "Value of amount is required")
     @Min(value = 1, message = "Value of amount must be greater than 0")
-    int value;
+    private int value;
     @NotBlank(message = "Currency is required")
     @Pattern(regexp = "^(RUB|USD|EUR)$", message = "Currency must be 'RUB', 'USD', or 'EUR'")
-    String currency;
+    private String currency;
     public Amount() {
     }
 }

@@ -3,10 +3,10 @@ package ru.netology.services.impl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.netology.dao.Log;
+import ru.netology.dao.LogDAO;
 import ru.netology.dao.TransferInfoDAO;
 import ru.netology.model.TransferStatus;
-import ru.netology.repository.LogRepository;
+import ru.netology.repository.impl.OperationLogRepositoryImpl;
 import ru.netology.services.LogService;
 
 import java.util.Date;
@@ -16,36 +16,37 @@ import java.util.concurrent.ConcurrentHashMap;
 @Service
 @RequiredArgsConstructor
 public class LogServiceImpl implements LogService {
-    private final LogRepository repository;
+    private final OperationLogRepositoryImpl repository;
 
     @Transactional
     @Override
     public void addLog(TransferInfoDAO transferInfoDAO) {
-        Log log = new Log();
-        log.setStatus(TransferStatus.ACCEPTED);
-        log.setTransferInfoDAO(transferInfoDAO);
-        log.setStartTime(new Date());
-        log.setUpdateTime(new Date());
-        repository.saveLogs(log);
+        LogDAO logDAO = new LogDAO();
+        logDAO.setStatus(TransferStatus.ACCEPTED);
+        logDAO.setTransferInfoDAO(transferInfoDAO);
+        logDAO.setStartTime(new Date());
+        logDAO.setUpdateTime(new Date());
+        repository.saveLogs(logDAO);
     }
 
     @Transactional
     @Override
-    public ConcurrentHashMap<Long, Log> getAllLogs() {
+    public ConcurrentHashMap<String, LogDAO> getAllLogs() {
         return repository.getLogMap();
     }
+
     @Transactional
     @Override
-    public Log findLogByTransferId(long idToFind) {
-        Optional<Log> value = getAllLogs().values().stream()
-                .filter(log -> log.getTransferInfoDAO().getOperationId() == idToFind)
+    public LogDAO findLogByTransferId(String idToFind) {
+        Optional<LogDAO> value = getAllLogs().values().stream()
+                .filter(log -> log.getTransferInfoDAO().getOperationId().equals(idToFind))
                 .findFirst();
         return value.orElse(null);
     }
 
     @Transactional
     @Override
-    public void updateLog(Long key, Log updatedLog) {
-        repository.updateLog(key, updatedLog);
+    public void updateLog(String key, LogDAO updatedLogDAO) {
+        repository.updateLog(key, updatedLogDAO);
     }
 }

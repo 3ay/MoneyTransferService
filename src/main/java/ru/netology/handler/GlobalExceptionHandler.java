@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import ru.netology.exceptions.ErrorResponse;
 import ru.netology.exceptions.IdNotFoundException;
-import ru.netology.exceptions.RequestTimeoutException;
+import ru.netology.exceptions.CodeExpiredException;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
@@ -18,25 +18,27 @@ public class GlobalExceptionHandler {
             String errorMessage = error.getDefaultMessage();
             messages.append(errorMessage).append("\n");
         });
-        ErrorResponse response = new ErrorResponse(messages.toString(),HttpStatus.BAD_REQUEST.value());
-        return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
+        ErrorResponse response = new ErrorResponse(messages.toString(), 400);
+        return new ResponseEntity<>(response, HttpStatus.valueOf(400));
     }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleInternalServerError(Exception ex) {
-        String errorMessage = "An unexpected error occurred: " + ex.getMessage();
-        ErrorResponse response = new ErrorResponse(errorMessage, HttpStatus.INTERNAL_SERVER_ERROR.value());
-        return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+        String errorMessage = String.format("%s %s", "An unexpected error occurred:", ex.getMessage());
+        ErrorResponse response = new ErrorResponse(errorMessage, 500);
+        return new ResponseEntity<>(response, HttpStatus.valueOf(500));
     }
-    @ExceptionHandler(RequestTimeoutException.class)
-    public ResponseEntity<ErrorResponse> handleRequestTimeoutException(RequestTimeoutException ex) {
-        ErrorResponse errorResponse = new ErrorResponse(ex.getMessage(),HttpStatus.REQUEST_TIMEOUT.value());
-        return new ResponseEntity<>(errorResponse, HttpStatus.REQUEST_TIMEOUT);
+
+    @ExceptionHandler(CodeExpiredException.class)
+    public ResponseEntity<ErrorResponse> handleCodeExpiredException(CodeExpiredException ex) {
+        ErrorResponse errorResponse = new ErrorResponse(ex.getMessage(), 400);
+        return new ResponseEntity<>(errorResponse, HttpStatus.valueOf(400));
     }
+
     @ExceptionHandler(IdNotFoundException.class)
-    public ResponseEntity<ErrorResponse> handleIdNotFoundException(IdNotFoundException ex)
-    {
-        String errorMessage = "Operation id not found " + ex.getMessage();
-        ErrorResponse response = new ErrorResponse(errorMessage, HttpStatus.NOT_FOUND.value());
-        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+    public ResponseEntity<ErrorResponse> handleIdNotFoundException(IdNotFoundException ex) {
+        String errorMessage = String.format("%s %s", "Operation id not found:", ex.getMessage());
+        ErrorResponse response = new ErrorResponse(errorMessage, 400);
+        return new ResponseEntity<>(response, HttpStatus.valueOf(400));
     }
 }

@@ -4,5 +4,5 @@ import lombok.Data;
 
 @Data
 public class ConfirmOperationResponse {
-    String operationId;
+    private String operationId;
 }

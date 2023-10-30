@@ -47,7 +47,7 @@ public class AppContainersTest {
     @Test
     void return400InvalidCard() {
         ResponseEntity<ErrorResponse> response = restTemplate.postForEntity(
-                "http://localhost:" + appContainer.getMappedPort(7070) + "/transfer",
+                String.format("http://localhost:%d/transfer", appContainer.getMappedPort(7070)),
                 initInvalidTransferInfoRequest(),
                 ErrorResponse.class);
 
@@ -61,7 +61,7 @@ public class AppContainersTest {
     @Test
     void return500StrangeRequest() {
         ResponseEntity<ErrorResponse> response = restTemplate.postForEntity(
-                "http://localhost:" + appContainer.getMappedPort(7070) + "/confirmOperation",
+                String.format("http://localhost:%d/confirmOperation", appContainer.getMappedPort(7070)),
                 initTransferInfoRequest(),
                 ErrorResponse.class);
 
