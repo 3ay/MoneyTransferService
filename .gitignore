@@ -1,10 +1,10 @@
 HELP.md
 target/
-!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
 ### STS ###
+.mvn/wrapper/
 .apt_generated
 .classpath
 .factorypath
@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+/.mvn/
