@@ -66,10 +66,10 @@ public class AppContainersTest {
                 ErrorResponse.class);
 
         assertThat(response.getStatusCode().value())
-                .isEqualTo(500);
+                .isEqualTo(400);
 
         assertThat(Objects.requireNonNull(response.getBody()).getMessage())
                 .isNotEmpty()
-                .contains("An unexpected error occurred");
+                .contains("Operation id not found");
     }
 }
